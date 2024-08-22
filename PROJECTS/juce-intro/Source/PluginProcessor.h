@@ -13,12 +13,12 @@
 //==============================================================================
 /**
 */
-class JuceintroAudioProcessor  : public juce::AudioProcessor
+class JuceIntroAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    JuceintroAudioProcessor();
-    ~JuceintroAudioProcessor() override;
+    JuceIntroAudioProcessor();
+    ~JuceIntroAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -55,5 +55,5 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceintroAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceIntroAudioProcessor)
 };
