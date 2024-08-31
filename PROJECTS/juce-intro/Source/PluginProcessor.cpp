@@ -139,13 +139,24 @@ void JuceIntroAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer, ju
         buffer.clear (i, 0, buffer.getNumSamples());
     
     juce::dsp::AudioBlock<float> block (buffer);
-    
+        
     for (int channel = 0; channel < block.getNumChannels(); ++channel)
     {
         auto* channelData = block.getChannelPointer(channel);
-        
+        auto& random = juce::Random::getSystemRandom();
+        const int spreadValue = JUCE_LIVE_CONSTANT(5);
+                
         for (int sample = 0; sample < block.getNumSamples(); ++sample) {
-            channelData[sample] *= 4.0;
+            
+            const int startNum = sample - spreadValue > 0 ? sample - spreadValue : sample;
+            const int endNum = sample + spreadValue < block.getNumSamples() ? sample + spreadValue : sample;
+            
+            const auto crust = channelData[random.nextInt (juce::Range<int> (startNum, endNum))];
+            
+//            const auto crustTwo = channelData[random.nextInt (juce::Range<int> (startNum, endNum))] * channelData[random.nextInt (juce::Range<int> (startNum, endNum))];
+            
+            channelData[sample] = (channelData[sample] + crust) / 2;
+
         }
     }
 }
