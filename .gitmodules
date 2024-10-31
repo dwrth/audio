@@ -4,3 +4,6 @@
 [submodule "PLUGS/FX/krvstenbraten"]
 	path = PLUGS/FX/krvstenbraten
 	url = https://github.com/dwrth/krvstenbraten.git
+[submodule "PLUGS/FX/skifteskift"]
+	path = PLUGS/FX/skifteskift
+	url = https://github.com/dwrth/skifteskift.git
