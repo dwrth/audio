@@ -8,11 +8,11 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.DavidWerth.juceintro</string>
+    <string>com.DavidWerth.krvstenbraten</string>
     <key>CFBundleName</key>
-    <string>juce-intro</string>
+    <string>krvstenbraten</string>
     <key>CFBundleDisplayName</key>
-    <string>juce-intro</string>
+    <string>krvstenbraten</string>
     <key>CFBundlePackageType</key>
     <string>BNDL</string>
     <key>CFBundleSignature</key>
@@ -29,11 +29,11 @@
     <array>
       <dict>
         <key>name</key>
-        <string>David Werth: juce-intro</string>
+        <string>David Werth: krvstenbraten</string>
         <key>description</key>
-        <string>juce-intro</string>
+        <string>krvstenbraten</string>
         <key>factoryFunction</key>
-        <string>juceintroAUFactory</string>
+        <string>krvstenbratenAUFactory</string>
         <key>manufacturer</key>
         <string>Manu</string>
         <key>type</key>

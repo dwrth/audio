@@ -14,11 +14,11 @@
 //==============================================================================
 /**
 */
-class JuceIntroAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::Slider::Listener
+class KrvstenBratenAudioProcessorEditor  : public juce::AudioProcessorEditor, private juce::Slider::Listener
 {
 public:
-    JuceIntroAudioProcessorEditor (JuceIntroAudioProcessor&);
-    ~JuceIntroAudioProcessorEditor() override;
+    KrvstenBratenAudioProcessorEditor (KrvstenBratenAudioProcessor&);
+    ~KrvstenBratenAudioProcessorEditor() override;
 
     //==============================================================================
     void paint (juce::Graphics&) override;
@@ -26,12 +26,11 @@ public:
 
 private:
     void sliderValueChanged (juce::Slider* slider) override;
-     
-    // This reference is provided as a quick way for your editor to
-    // access the processor object that created it.
-    JuceIntroAudioProcessor& audioProcessor;
+    KrvstenBratenAudioProcessor& audioProcessor;
     
     juce::Slider crumble;
+    juce::Image backgroundImage;
+    juce::MouseCursor cursedCursor;
 
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceIntroAudioProcessorEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (KrvstenBratenAudioProcessorEditor)
 };

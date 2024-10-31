@@ -13,12 +13,12 @@
 //==============================================================================
 /**
 */
-class JuceIntroAudioProcessor  : public juce::AudioProcessor
+class KrvstenBratenAudioProcessor  : public juce::AudioProcessor
 {
 public:
     //==============================================================================
-    JuceIntroAudioProcessor();
-    ~JuceIntroAudioProcessor() override;
+    KrvstenBratenAudioProcessor();
+    ~KrvstenBratenAudioProcessor() override;
 
     //==============================================================================
     void prepareToPlay (double sampleRate, int samplesPerBlock) override;
@@ -58,5 +58,5 @@ public:
 
 private:
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (JuceIntroAudioProcessor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (KrvstenBratenAudioProcessor)
 };

@@ -10,50 +10,53 @@
 #include "PluginEditor.h"
 
 //==============================================================================
-JuceIntroAudioProcessorEditor::JuceIntroAudioProcessorEditor (JuceIntroAudioProcessor& p)
+KrvstenBratenAudioProcessorEditor::KrvstenBratenAudioProcessorEditor (KrvstenBratenAudioProcessor& p)
     : AudioProcessorEditor (&p), audioProcessor (p)
 {
-    // Make sure that before the constructor has finished, you've set the
-    // editor's size to whatever you need it to be.
-    setSize (200, 200);
+    setSize (250, 250);
+
+    cursedCursor = juce::MouseCursor(juce::ImageCache::getFromMemory(BinaryData::_8449135_png, BinaryData::_8449135_pngSize).rescaled(40, 40), 0, 0);
     
-    crumble.setSliderStyle (juce::Slider::LinearBarVertical);
-    crumble.setRange (1, 50, 1);
-    crumble.setTextBoxStyle (juce::Slider::NoTextBox, false, 90, 0);
-    crumble.setPopupDisplayEnabled (true, false, this);
-    crumble.setTextValueSuffix (" crumble");
-    crumble.setValue(5);
-     
-    addAndMakeVisible (&crumble);
-    
+    crumble.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    crumble.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::black);
+    crumble.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::transparentWhite);
+    crumble.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::black);
+    crumble.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::transparentWhite);
+    crumble.setMouseCursor(cursedCursor);
+    crumble.setVelocityModeParameters();
+    crumble.setScrollWheelEnabled(true);
+    crumble.setDoubleClickReturnValue(true, 0.f);
+    crumble.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 190, 25);
+    crumble.setTextValueSuffix(" kg krvstenbraten");
+    crumble.setRange(0.f, 150.f, 0.1);
+    crumble.setValue(50);
     crumble.addListener(this);
+    addAndMakeVisible(&crumble);
+
 }
 
-void JuceIntroAudioProcessorEditor::sliderValueChanged (juce::Slider* slider)
+void KrvstenBratenAudioProcessorEditor::sliderValueChanged (juce::Slider* slider)
 {
     audioProcessor.crumbleVal = crumble.getValue();
 }
 
-JuceIntroAudioProcessorEditor::~JuceIntroAudioProcessorEditor()
+KrvstenBratenAudioProcessorEditor::~KrvstenBratenAudioProcessorEditor()
 {
 }
 
 //==============================================================================
-void JuceIntroAudioProcessorEditor::paint (juce::Graphics& g)
+void KrvstenBratenAudioProcessorEditor::paint (juce::Graphics& g)
 {
-    // fill the whole window white
-    g.fillAll (juce::Colours::white);
- 
-    // set the current drawing colour to black
-    g.setColour (juce::Colours::black);
- 
-    // set the font size and draw text to the screen
-    g.setFont (15.0f);
- 
-    g.drawFittedText ("how much crust u want?", 0, 0, getWidth(), 30, juce::Justification::centred, 1);
+    g.fillAll(juce::Colours::white);
+    backgroundImage = juce::ImageCache::getFromMemory(BinaryData::kruste_png, BinaryData::kruste_pngSize);
+    const juce::Image backgroundImageRescaled = backgroundImage.rescaled(80, 80);
+    g.drawImageWithin(backgroundImageRescaled, 2, -15, getWidth(), getWidth(), juce::RectanglePlacement::doNotResize);
 }
 
-void JuceIntroAudioProcessorEditor::resized()
+void KrvstenBratenAudioProcessorEditor::resized()
 {
-    crumble.setBounds (40, 30, 20, getHeight() - 60);
+     
+    crumble.setBounds(0, 0, 180, 180);
+    crumble.setCentrePosition(getWidth() / 2, getHeight() / 2);
+    
 }
