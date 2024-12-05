@@ -7,3 +7,9 @@
 [submodule "PLUGS/FX/skifteskift"]
 	path = PLUGS/FX/skifteskift
 	url = https://github.com/dwrth/skifteskift.git
+[submodule "DAISY/DaisySP"]
+	path = DAISY/DaisySP
+	url = https://github.com/electro-smith/DaisySP.git
+[submodule "DAISY/libDaisy"]
+	path = DAISY/libDaisy
+	url = https://github.com/electro-smith/libDaisy.git
