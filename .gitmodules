@@ -16,3 +16,6 @@
 [submodule "getting-started-book"]
 	path = getting-started-book
 	url = https://github.com/TheAudioProgrammer/getting-started-book.git
+[submodule "PLUGS/FX/delay"]
+	path = PLUGS/FX/delay
+	url = https://github.com/dwrth/delay.git
