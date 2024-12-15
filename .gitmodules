@@ -13,3 +13,6 @@
 [submodule "DAISY/libDaisy"]
 	path = DAISY/libDaisy
 	url = https://github.com/electro-smith/libDaisy.git
+[submodule "getting-started-book"]
+	path = getting-started-book
+	url = https://github.com/TheAudioProgrammer/getting-started-book.git
