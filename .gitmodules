@@ -19,3 +19,6 @@
 [submodule "PLUGS/FX/delay"]
 	path = PLUGS/FX/delay
 	url = https://github.com/dwrth/delay.git
+[submodule "DAISY/DaisyExamples"]
+	path = DAISY/DaisyExamples
+	url = https://github.com/dwrth/DaisyExamples.git
