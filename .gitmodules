@@ -22,3 +22,6 @@
 [submodule "DAISY/DaisyExamples"]
 	path = DAISY/DaisyExamples
 	url = https://github.com/dwrth/DaisyExamples.git
+[submodule "Rack"]
+	path = Rack
+	url = https://github.com/VCVRack/Rack.git
