@@ -25,3 +25,6 @@
 [submodule "Rack"]
 	path = Rack
 	url = https://github.com/VCVRack/Rack.git
+[submodule "SEEDPROJECTS/vollkorn"]
+	path = SEEDPROJECTS/vollkorn
+	url = https://github.com/dwrth/vollkorn.git
