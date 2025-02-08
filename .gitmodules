@@ -7,12 +7,6 @@
 [submodule "PLUGS/FX/skifteskift"]
 	path = PLUGS/FX/skifteskift
 	url = https://github.com/dwrth/skifteskift.git
-[submodule "DAISY/DaisySP"]
-	path = DaisySP
-	url = https://github.com/electro-smith/DaisySP.git
-[submodule "DAISY/libDaisy"]
-	path = libDaisy
-	url = https://github.com/electro-smith/libDaisy.git
 [submodule "getting-started-book"]
 	path = getting-started-book
 	url = https://github.com/TheAudioProgrammer/getting-started-book.git
