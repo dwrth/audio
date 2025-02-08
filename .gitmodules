@@ -8,10 +8,10 @@
 	path = PLUGS/FX/skifteskift
 	url = https://github.com/dwrth/skifteskift.git
 [submodule "DAISY/DaisySP"]
-	path = DAISY/DaisySP
+	path = DaisySP
 	url = https://github.com/electro-smith/DaisySP.git
 [submodule "DAISY/libDaisy"]
-	path = DAISY/libDaisy
+	path = libDaisy
 	url = https://github.com/electro-smith/libDaisy.git
 [submodule "getting-started-book"]
 	path = getting-started-book
@@ -19,12 +19,6 @@
 [submodule "PLUGS/FX/delay"]
 	path = PLUGS/FX/delay
 	url = https://github.com/dwrth/delay.git
-[submodule "DAISY/DaisyExamples"]
-	path = DAISY/DaisyExamples
-	url = https://github.com/dwrth/DaisyExamples.git
-[submodule "Rack"]
-	path = Rack
-	url = https://github.com/VCVRack/Rack.git
 [submodule "SEEDPROJECTS/vollkorn"]
 	path = SEEDPROJECTS/vollkorn
 	url = https://github.com/dwrth/vollkorn.git
