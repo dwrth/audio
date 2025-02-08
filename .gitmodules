@@ -16,3 +16,9 @@
 [submodule "SEEDPROJECTS/vollkorn"]
 	path = SEEDPROJECTS/vollkorn
 	url = https://github.com/dwrth/vollkorn.git
+[submodule "LIBS/DAISY"]
+	path = LIBS/DAISY
+	url = https://github.com/dwrth/DAISY.git
+[submodule "LIBS/JUCE"]
+	path = LIBS/JUCE
+	url = https://github.com/juce-framework/JUCE.git
